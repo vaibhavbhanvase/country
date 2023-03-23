@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Task</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="bg-light  py-3 m-5 text-warning text-center">
+        <h1>World Countries Data</h1>
+        <h6 class="text-dark" id="countriesCount">currently, we have 250 countries</h6>
+        <h6 class="text-dark" id="countriesCounts"></h6>
+
+
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <input class="p-3 bg-light" type="search" id="search" size="70"
+                placeholder="Search Countries by name, city and languages">
+            <button class="btn btn-warning px-5 mr-4 mt-3" id="nameBtn">NAME
+                <i class="fa-solid fa-arrow-down  ml-1 namebysns" id="nameDecending"></i>
+            </button>
+            <button class="btn btn-warning px-5 mr-4 mt-3" id="capitalBtn">CAPITAL
+                <i class="fa-solid fa-arrow-down  ml-1 namebysns" id="capitalDecending"></i>
+            </button>
+            <button class="btn btn-warning px-5 mr-4 mt-3" id="populationDecending">POPULATION
+                <i class="fa-solid fa-arrow-down  ml-1 namebysns" id="popilationDecending"></i>
+            </button>
+            <a href="#chart"><button class="btn" id="graphBtn"><i
+                        class="fa-solid fa-chart-column mt-3"></i></button></a>
+        </div>
+
+    </div>
+    <div class="box bg-light  m-5">
+        <div class="containers">
+            <div class="row" id="countryContainer">
+                <!-- <div class="card-size">
+                    <div class="card">
+                        <figure class="countryCard">
+                            <div class=" mx-auto img-card shadow-sm p-1 mb-4 bg-white rounded col-8">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg"
+                                    alt="">
+                            </div>
+                            <figcaption>
+                                <div class="country-detailes">
+                                    <h6 class="text-uppercase text-warning text-center">Afghanistan</h6>
+                                    <div class="country-data ml-3">
+                                        <span class="text-dark"><strong> Capital:</strong>Kabul</span><br>
+                                        <span class="text-dark"><strong> Languages:</strong>Pashto, Uzbek,
+                                            Turkmen</span> <br>
+                                        <span class="text-dark"><strong> Population:</strong> 38928341</span>
+                                    </div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
+
+    <div class="containers" id="chart">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4 mr-5">
+                <button class="btn btn-warning px-4 mr-4 mt-5 mb-2" id="populationBtn">POPULATION</button></a>
+                <button class="btn btn-warning px-4 mr-4 mt-5  mr-5 mb-2" id="languageBtn">LANGUAGE</button>
+            </div>
+            <div class="col-4"></div>
+            <span class="text-center">10 Most Populated Countries In The Word</span>
+        </div>
+        <div class="row bg-light mx-5 mt-5 p-5" id="populationChart">
+
+            <div class="mt-3 p-0">
+                <ul class="countries" style="list-style: none;">
+                    <li>Word</li>
+                    <li>China</li>
+                    <li>India</li>
+                    <li>USA</li>
+                    <li>Indonesia</li>
+                    <li>Pakisthan</li>
+                    <li>Brazil</li>
+                    <li>Nigeria</li>
+                    <li>Bangladesh</li>
+                    <li>Russia</li>
+                    <li>Mexico</li>
+                </ul>
+            </div>
+            <div class="col-sm-8 ">
+
+                <div class="world bg-warning my-3">
+
+                </div>
+                <div class="china bg-warning my-3">
+
+                </div>
+                <div class="india bg-warning my-3">
+
+                </div>
+                <div class="usa bg-warning my-3">
+
+                </div>
+                <div class="indonesia bg-warning my-3">
+
+                </div>
+                <div class="pakisthan bg-warning my-3">
+
+                </div>
+                <div class="brazil bg-warning my-3">
+
+                </div>
+                <div class="nigeria bg-warning my-3">
+
+                </div>
+                <div class="bangladesh bg-warning my-3">
+
+                </div>
+                <div class="russia bg-warning my-3">
+
+                </div>
+                <div class="mexico bg-warning my-3">
+
+                </div>
+            </div>
+            <div class="mt-3 p-0">
+                <ul class="countries" style="list-style: none;">
+                    <li>7,693,165599</li>
+                    <li>1,402,112,000</li>
+                    <li>1,380,004,385</li>
+                    <li>329,484,123</li>
+                    <li>273,523,621</li>
+                    <li>220,892,331</li>
+                    <li>212,559,409</li>
+                    <li>206,139,587</li>
+                    <li>164,689,38</li>
+                    <li>144,104,080</li>
+                    <li>128,932,753</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <div class="containers lang d-none" id="langChart">
+            <div class="row bg-light mx-5 mt-5 p-5">
+
+                <div class="mt-3 p-0">
+                    <ul class="countries" style="list-style: none;">
+                        <li>English</li>
+                        <li>Arabic</li>
+                        <li>French</li>
+                        <li>Chinese</li>
+                        <li>Spanish</li>
+                        <li>Persian</li>
+                        <li>German</li>
+                        <li>Russian</li>
+                        <li>Malaysian</li>
+                        <li>Portuguese</li>
+                    </ul>
+                </div>
+                <div class="col-sm-8 ">
+
+                    <div class="english bg-warning my-3">
+
+                    </div>
+                    <div class="arabic bg-warning my-3">
+
+                    </div>
+                    <div class="french bg-warning my-3">
+
+                    </div>
+                    <div class="chinese bg-warning my-3">
+
+                    </div>
+                    <div class="spanish bg-warning my-3">
+
+                    </div>
+                    <div class="persian bg-warning my-3">
+
+                    </div>
+                    <div class="german bg-warning my-3">
+
+                    </div>
+                    <div class="russian bg-warning my-3">
+
+                    </div>
+                    <div class="malaysian bg-warning my-3">
+
+                    </div>
+                    <div class="portuguese bg-warning my-3">
+
+                    </div>
+                </div>
+                <div class="mt-3 p-0">
+                    <ul class="countries" style="list-style: none;">
+                        <li>91</li>
+                        <li>60</li>
+                        <li>51</li>
+                        <li>33</li>
+                        <li>31</li>
+                        <li>29</li>
+                        <li>18</li>
+                        <li>16</li>
+                        <li>13</li>
+                        <li>12</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    <div class=" fototer-data mx-5 py-2">
+            <footer>
+                <h6 class="text-center">Copyrighte © 2023| By The Ultimate Coder</h6>
+            </footer>
+        <div class=" text-center h2">
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-linkedin mx-5"></i>
+            <i class="fa-brands fa-square-twitter"></i>
+
+        </div>
+    </div>
+
+        <script src="./assets/js/country.js"></script>
+        <script src="./assets/js/app.js"></script>
+
+</body>
+
+</html>
